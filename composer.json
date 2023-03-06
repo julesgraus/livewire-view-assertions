@@ -1,0 +1,38 @@
+{
+    "name": "julesgraus/livewire-view-assertions",
+    "description": "Adds extra assertions to Livewires tests to assert that things are bound in the view of components",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "JulesGraus\\LivewireViewAssertions\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\": "vendor/orchestra/testbench-core/laravel/app",
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jules"
+        }
+    ],
+    "require": {
+        "livewire/livewire": "^2.12"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.22",
+        "phpunit/phpunit": "^9.6"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JulesGraus\\LivewireViewAssertions\\LivewireServiceProvider"
+            ]
+        }
+    }
+}
