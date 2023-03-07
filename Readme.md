@@ -1,11 +1,11 @@
 # Livewire view assertions
 The current [Laravel Livewire](https://laravel-livewire.com) test functionalities don't have assertions that allow you to 
-check if a property or action form a livewire component actually are bound to the view of a
+check if a property or action form a Livewire component actually are bound to the view of a
 [Laravel Livewire](https://laravel-livewire.com) component.
 
 With this package you'll get a couple of extra assertions you can use to do so. 
 I've created a discussion and pull request too to the [Livewire GitHub repository](https://github.com/livewire/livewire). So in the near feature,
-i hope that you can use these assertions directly from the livewire package itself.
+i hope that you can use these assertions directly from the Livewire package itself. Or just simply ask. I will then be abl
 
 ## Installation instructions
 Using composer:
@@ -23,7 +23,7 @@ class TestableLivewireViewBindingsTest extends TestCase
     public function test_asserts_all_properties_are_bound()
     {
         Livewire::test(SomeComponent::class)
-            ->assertPropertyBound('foo');
+            ->assertPropertyBound('foo')
             ->assertPropertyBound('bar', 2);
     }
 }

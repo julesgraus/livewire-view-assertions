@@ -2,7 +2,7 @@
 
 namespace JulesGraus\LivewireViewAssertions\Testing\Concerns;
 
-use Illuminate\View\View;
+use JulesGraus\LivewireViewAssertions\Testing\TestableLivewire;
 use PHPUnit\Framework\Assert as PHPUnit;
 
 trait MakesAssertionsOnView
@@ -10,7 +10,7 @@ trait MakesAssertionsOnView
     /**
      * @param string $propertyName The name of the property on the Livewire component that is expected to be bound in the view/
      * @param int|null $times If null, then the property is checked to be bound at least once. Else, exactly that amount.
-     * @return self
+     * @return MakesAssertionsOnView|TestableLivewire
      */
     public function assertPropertyBound(string $propertyName, int $times = null): self
     {
@@ -30,7 +30,7 @@ trait MakesAssertionsOnView
 
     /**
      * @param string $propertyName
-     * @return self
+     * @return MakesAssertionsOnView|TestableLivewire
      */
     public function assertPropertyNotBound(string $propertyName): self
     {
@@ -42,7 +42,7 @@ trait MakesAssertionsOnView
      * @param string $actionName The action / method on the Livewire component that is expected to be bound in the view.
      * @param string|null $eventName The dispatched browser event the action must trigger on. For example: click, keydown or submit.
      * @param int|null $times If null, then the action is checked to be bound at least once. Else, exactly that amount.
-     * @return self
+     * @return MakesAssertionsOnView|TestableLivewire
      */
     public function assertActionBound(string $actionName, string $eventName = null, int $times = null): self
     {
@@ -70,7 +70,7 @@ trait MakesAssertionsOnView
 
     /**
      * @param string $key
-     * @return self
+     * @return MakesAssertionsOnView|TestableLivewire
      */
     public function assertActionNotBound(string $key): self
     {
