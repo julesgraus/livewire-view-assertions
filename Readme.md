@@ -1,5 +1,5 @@
-# Livewire view assertions
-The current [Laravel Livewire](https://laravel-livewire.com) test functionalities don't have assertions that allow you to 
+# Livewire 2 view assertions
+The current [Laravel Livewire](https://laravel-livewire.com) test functionalities for version 2 don't have assertions that allow you to 
 check if a property or action form a Livewire component actually are bound to the view of a
 [Laravel Livewire](https://laravel-livewire.com) component.
 
